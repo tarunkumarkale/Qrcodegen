@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p>Enter your text or url</p>
+        <input type="text" placeholder="Text or url" id="Qrtext">
+        <div id="imgbox">
+            <img src="" id="Qrimg">
+        </div>
+        <button onclick="Gen()" >Generate QR Code</button>
+    </div>
+    <script>
+let imgShow=document.getElementById('imgbox')
+let qrimg=document.getElementById('Qrimg')
+
+let qrtext=document.getElementById('Qrtext')
+
+const Gen=async()=>{
+qrimg.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrtext.value
+
+ 
+}
+    </script>
+</body>
+</html>
